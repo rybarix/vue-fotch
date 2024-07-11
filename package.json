@@ -1,0 +1,60 @@
+{
+  "name": "vue-fotch",
+  "version": "1.0.0",
+  "description": "Convinient fetch alternative for vue3 projects.",
+  "module": "./dist/esm/fotch.js",
+  "type": "module",
+  "main": "./dist/esm/fotch.js",
+  "types": "./dist/esm/fotch.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/fotch.d.ts",
+        "default": "./dist/esm/fotch.js"
+      },
+      "require": {
+        "types": "./dist/cjs/fotch.d.ts",
+        "default": "./dist/cjs/fotch.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "test": "node dist-dev/test/fotch.spec.js",
+    "build-lib": "npm run _build-esm && npm run _build-cjs",
+    "_build-esm": "tsc -p tsconfig.esm.json",
+    "_build-cjs": "tsc -p tsconfig.cjs.json"
+  },
+  "keywords": [
+    "fetch",
+    "fetch composable",
+    "vue fetch",
+    "composable",
+    "vue3"
+  ],
+  "author": "Sandro Rybarik",
+  "license": "MIT",
+  "homepage": "https://github.com/rybarix/vue-fotch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rybarix/vue-fotch"
+  },
+  "bugs": {
+    "url": "https://github.com/rybarix/vue-fotch/issues"
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.24.7",
+    "@fastify/formbody": "^7.4.0",
+    "@types/node": "^20.14.9",
+    "fastify": "^4.28.1",
+    "tsc-alias": "^1.8.10",
+    "typescript": "^5.5.2",
+    "vue": "^3.4.31"
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "outDir": "./dist/cjs",
+        "removeComments": true,
+        "target": "ES6",
+        "declaration": true,
+        "declarationMap": true,
+    },
+    "include": ["./src/**/*.ts"],
+    "exclude": [
+        "node_modules/**/*",
+        "dist/**/*",
+        "dist-dev/**/*",
+    ],
+    "tsc-alias": {
+        "verbose": false,
+        "resolveFullPaths": true,
+        "fileExtensions": {
+            "inputGlob": "{js,jsx,mjs}",
+            "outputCheck": ["js", "json", "jsx", "mjs"]
+        }
+    }
+}
